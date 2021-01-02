@@ -16,5 +16,12 @@ class TestContactPageView:
     def test_contact_view(self):
         request = RequestFactory().get('/contact')
         response = views.contact(request)
-        assert response.status_code == 200, 'Should display contact info'  
+        assert response.status_code == 200, 'Should display contact info'
+
+class TestAboutPageView:
+
+    def test_about_view(self):
+        request = RequestFactory().get('/about')
+        response = views.about(request)
+        assert response.status_code == 200, 'Should display about info'  
 
